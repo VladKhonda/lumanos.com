@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LumanOS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumanOS – Cyberpunk Interface</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+  </style>
 </head>
 <body>
-  
+  <div id="boot-screen">
+    <pre id="terminal-text"></pre>
+  </div>
+
+  <main id="desktop" class="hidden">
+    <header class="macos-bar">
+      <span class="logo"> LumanOS</span>
+      <nav>
+        <ul>
+          <li>Finder</li>
+          <li>File</li>
+          <li>Edit</li>
+          <li>View</li>
+          <li>Go</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="welcome-window">
+      <h1>👾 Welcome to LumanOS</h1>
+      <p>Cyberpunk Virtual Environment</p>
+      <button onclick="enterSystem()">🔓 Enter System</button>
+    </section>
+  </main>
+
+  <audio id="boot-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-game-notification-212.wav"></audio>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
