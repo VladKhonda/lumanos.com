@@ -1,33 +1,18 @@
-const terminalText = [
-    'Initializing LumanOS v1.0...',
-    '[OK] Loading kernel modules...',
-    '[OK] Starting neon core engine...',
-    '[OK] Connecting to mainframe...',
-    'Welcome, user_00X. Launching interface...'
-  ];
+function updateTime() {
+  const timeEl = document.getElementById("time")
+  const now = new Date()
 
-  const terminal = document.getElementById('terminal-text');
-  const bootSound = document.getElementById('boot-sound');
-  const desktop = document.getElementById('desktop');
-  const bootScreen = document.getElementById('boot-screen');
+  const days = ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+  const months = ['Січ', 'Лют', 'Бер', 'Квіт', 'Трав', 'Черв', 'Лип', 'Серп', 'Вер', 'Жовт', 'Лист', 'Груд']
 
-  let line = 0;
-  function typeNextLine() {
-    if (line < terminalText.length) {
-      terminal.textContent += terminalText[line] + '\n';
-      line++;
-      setTimeout(typeNextLine, 700);
-    } else {
-      setTimeout(() => {
-        bootSound.play();
-        bootScreen.classList.add('hidden');
-        desktop.classList.remove('hidden');
-      }, 1000);
-    }
-  }
+  const day = days[now.getDay()]
+  const date = now.getDate()
+  const month = months[now.getMonth()]
+  const hours = now.getHours().toString().padStart(2, '0')
+  const minutes = now.getMinutes().toString().padStart(2, '0')
 
-  window.onload = typeNextLine;
+  timeEl.textContent = `${day} ${date} ${month} ${hours}:${minutes}`
+}
 
-  function enterSystem() {
-    alert('Access granted. Welcome to LumanOS!');
-  }
+updateTime()
+setInterval(updateTime, 1000)

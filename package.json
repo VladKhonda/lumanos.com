@@ -1,0 +1,23 @@
+{
+  "name": "lumanos.com",
+  "version": "1.0.0",
+  "description": "Це мій персональний вебсайт-проєкт, створений з ❤️ за допомогою HTML/CSS/JS.",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass styles/main.sass style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladKhonda/lumanos.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladKhonda/lumanos.com/issues"
+  },
+  "homepage": "https://github.com/VladKhonda/lumanos.com#readme",
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
